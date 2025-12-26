@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio | IT Student</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="Jenny.jpeg.png" type="image/x-icon">
+</head>
+<body class="light-mode">
+    
+    <nav id="navbar" class="light-mode">
+        <div class="nav-container">
+            <div class="logo">MyPortfolio</div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button class="theme-toggle" id="themeToggle">🌙 Dark Mode</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="home-content">
+            <img src="me (2).jpg" alt="Profile Photo" class="profile-photo">
+            <h1>Hello, I'm <span class="highlight">Jenny Babe M. Orbiso</span></h1>
+            <p class="tagline">Aspiring Full-Stack Developer | IT Student</p>
+            <p class="quote">“Always do your best, and God will do the rest.” ✨</p>
+            <p class="intro-text">I am a motivated student with a strong interest in technology
+                and innovation. Aspiring to become a professional in the tech
+                industry, I am continuously developing my skills in programming,
+                problem-solving, and system development.</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-grid">
+            <div class="about-card">
+                <div class="card-icon">🎓</div>
+                <h3>Education</h3>
+                <p><strong>Bachelor of Science in Information Technology</strong></p>
+                <p>Eastern Visayas State University</p>
+                <p>2024 - Present</p>
+                <p class="mt-1"><strong>Senior High School</strong></p>
+                <p>TVL-ICT Strand</p>
+                <p>2022 - 2024</p>
+            </div>
+
+            <div class="about-card">
+                <div class="card-icon">💡</div>
+                <h3>Technical Interests</h3>
+                <ul>
+                    <li>Full-Stack Web Development</li>
+                    <li>UI/UX Design</li>
+                    <li>Database Management</li>
+                    <li>Cybersecurity</li>
+                    <li>Networking</li>
+                </ul>
+            </div>
+
+            <div class="about-card">
+                <div class="card-icon">🎨</div>
+                <h3>Hobbies & Interests</h3>
+                <ul>
+                    <li>Coding personal projects</li>
+                    <li>Dancing</li>
+                    <li>Playing video games</li>
+                    <li>Listening to music</li>
+                    <li>Learning new technologies</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            
+            <div class="skill-category">
+                <h3>💻 Programming Languages</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3>🤝 Soft Skills</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Teamwork</span>
+                    <span class="skill-tag">Problem Solving</span>
+                    <span class="skill-tag">Communication</span>
+                    <span class="skill-tag">Time Management</span>
+                    <span class="skill-tag">Adaptability</span>
+                    <span class="skill-tag">Critical Thinking</span>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="skill-category">
+                <h3>🛠️ Tools & Technologies</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">VS Code</span>
+                    <span class="skill-tag">Linux</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">Figma</span>
+                </div>
+            </div>
+
+            <!-- Technical Areas -->
+            <div class="skill-category">
+                <h3>🎯 Technical Areas</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Web Development</span>
+                    <span class="skill-tag">Networking</span>
+                    <span class="skill-tag">Cybersecurity</span>
+                    <span class="skill-tag">UI/UX Design</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <div class="project-thumbnail">
+                    <img src="OIP.jpg" alt="Project 1">
+                </div>
+                <div class="project-content">
+                    <h3>Personal Portfolio Website</h3>
+                    <p class="project-description">A responsive single-page portfolio website showcasing my skills, projects, and contact information. Features include dark/light mode toggle and smooth scrolling navigation.</p>
+                    <p class="project-role"><strong>Role:</strong> Solo Developer</p>
+                    <p class="project-tools"><strong>Tools:</strong> HTML, CSS, JavaScript</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-thumbnail">
+                    <img src="OIP (1).jpg" alt="Project 2">
+                </div>
+                <div class="project-content">
+                    <h3>EVSU Work Maintenance Request System</h3>
+                    <p class="project-description">A Python-based maintenance request system for EVSU Ormoc Campus that enables offices to submit work orders digitally. Features include email-restricted authentication, automatic staff assignment, and real-time request tracking.</p>
+                    <p class="project-role"><strong>Role:</strong> Lead Developer</p>
+                    <p class="project-tools"><strong>Tools:</strong> Python, Tkinter, SQLite</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">View Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <h3>Send Me a Message</h3>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <div>
+                        <strong>Email</strong>
+                        <p>jennybabe.orbiso@evsu.edu.ph</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span>
+                    <div>
+                        <strong>Phone</strong>
+                        <p>+6981 545 9248</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📍</span>
+                    <div>
+                        <strong>Location</strong>
+                        <p>Ormoc City, Leyte, Philippines</p>
+                    </div>
+                </div>
+
+                <h3 class="social-title">Connect With Me</h3>
+                <div class="social-links">
+                    <a href="https://github.com/jenny-spec-max" class="social-link" target="_blank">
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" class="social-link" target="_blank">
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61571279593498" class="social-link" target="_blank">
+                        <span>Facebook</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Jenny Babe Orbiso. All rights reserved.</p>
+        <p>Made with 💜 and lots of ☕</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
