@@ -1,27 +1,20 @@
-// ===== THEME TOGGLE WITH LOCALSTORAGE =====
-
-// Get theme toggle button and navbar
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
 const navbar = document.getElementById('navbar');
 const navLinks = document.getElementById('navLinks');
 
-// Check for saved theme preference or default to 'light-mode'
+
 const currentTheme = localStorage.getItem('theme') || 'light-mode';
 
-// Apply the saved theme on page load
 body.classList.add(currentTheme);
 navbar.classList.add(currentTheme);
 navLinks.classList.add(currentTheme);
 
-// Update button text based on current theme
+
 updateThemeButtonText();
 
-// Theme toggle event listener
 themeToggle.addEventListener('click', () => {
-    // Toggle between light and dark mode
     if (body.classList.contains('light-mode')) {
-        // Switch to dark mode
         body.classList.remove('light-mode');
         body.classList.add('dark-mode');
         navbar.classList.remove('light-mode');
@@ -29,10 +22,8 @@ themeToggle.addEventListener('click', () => {
         navLinks.classList.remove('light-mode');
         navLinks.classList.add('dark-mode');
         
-        // Save preference to localStorage
         localStorage.setItem('theme', 'dark-mode');
     } else {
-        // Switch to light mode
         body.classList.remove('dark-mode');
         body.classList.add('light-mode');
         navbar.classList.remove('dark-mode');
@@ -40,15 +31,14 @@ themeToggle.addEventListener('click', () => {
         navLinks.classList.remove('dark-mode');
         navLinks.classList.add('light-mode');
         
-        // Save preference to localStorage
+   
         localStorage.setItem('theme', 'light-mode');
     }
     
-    // Update button text
     updateThemeButtonText();
 });
 
-// Function to update theme button text
+
 function updateThemeButtonText() {
     if (body.classList.contains('light-mode')) {
         themeToggle.textContent = '🌙 Dark Mode';
@@ -58,7 +48,6 @@ function updateThemeButtonText() {
 }
 
 
-// ===== MOBILE MENU TOGGLE =====
 
 const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 
@@ -66,15 +55,12 @@ mobileMenuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 
-// Close mobile menu when clicking on a nav link
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
     });
 });
 
-
-// ===== SMOOTH SCROLLING FOR NAVIGATION LINKS =====
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -93,23 +79,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-
-
-// ===== CONTACT FORM SUBMISSION =====
-
 const contactForm = document.getElementById('contactForm');
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    // Get form values
+    
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
     
-    // Simple validation
+  
     if (name && email && message) {
-        // Show success message
+        
         alert(`Thank you, ${name}! Your message has been sent successfully. I'll get back to you at ${email} soon!`);
         
         // Reset form
@@ -118,19 +100,15 @@ contactForm.addEventListener('submit', (e) => {
         alert('Please fill in all fields.');
     }
     
-    // Note: In a real application, you would send this data to a server
-    // For example, using fetch() API or a form submission service
 });
 
 
-// ===== NAVBAR SCROLL EFFECT =====
 
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
-    // Add shadow when scrolled
     if (currentScroll > 50) {
         navbar.style.boxShadow = '0 4px 20px rgba(124, 58, 237, 0.2)';
     } else {
@@ -145,7 +123,6 @@ window.addEventListener('scroll', () => {
 });
 
 
-// ===== ACTIVE NAVIGATION LINK HIGHLIGHTING =====
 
 // Get all sections
 const sections = document.querySelectorAll('section');
@@ -172,9 +149,6 @@ window.addEventListener('scroll', () => {
 });
 
 
-// ===== ANIMATE ELEMENTS ON SCROLL =====
-
-// Intersection Observer for fade-in animations
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -198,7 +172,6 @@ document.querySelectorAll('.about-card, .skill-category, .project-card, .contact
 });
 
 
-// ===== SKILL TAG ANIMATION =====
 
 const skillTags = document.querySelectorAll('.skill-tag');
 
@@ -214,7 +187,7 @@ skillTags.forEach((tag, index) => {
 });
 
 
-// ===== TYPING EFFECT FOR TAGLINE (OPTIONAL) =====
+
 
 const tagline = document.querySelector('.tagline');
 const originalText = tagline.textContent;
@@ -228,30 +201,11 @@ function typeEffect() {
     }
 }
 
-// Uncomment below to enable typing effect
-// tagline.textContent = '';
-// typeEffect();
-
-
-// ===== CONSOLE MESSAGE (EASTER EGG) =====
-
 console.log('%cWelcome to My Portfolio! 💜', 'color: #7c3aed; font-size: 20px; font-weight: bold;');
 console.log('%cLooking for something? Feel free to explore the code!', 'color: #9333ea; font-size: 14px;');
 console.log('%cMade with ❤️ and lots of ☕', 'color: #a855f7; font-size: 12px;');
 
 
-// ===== PREVENT RIGHT CLICK (OPTIONAL - REMOVE IF NOT NEEDED) =====
-
-// Uncomment below to prevent right-click
-// document.addEventListener('contextmenu', (e) => {
-//     e.preventDefault();
-//     alert('Right-click is disabled on this portfolio.');
-// });
-
-
-// ===== BACK TO TOP BUTTON (OPTIONAL) =====
-
-// Create back to top button
 const backToTopButton = document.createElement('button');
 backToTopButton.innerHTML = '↑';
 backToTopButton.id = 'backToTop';
@@ -275,7 +229,6 @@ backToTopButton.style.cssText = `
 
 document.body.appendChild(backToTopButton);
 
-// Show/hide back to top button
 window.addEventListener('scroll', () => {
     if (window.pageYOffset > 300) {
         backToTopButton.style.opacity = '1';
@@ -286,7 +239,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Scroll to top when clicked
+
 backToTopButton.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
@@ -295,19 +248,15 @@ backToTopButton.addEventListener('click', () => {
 });
 
 
-// ===== PROJECT LINKS FUNCTIONALITY =====
 
-// Add event listeners to project links
 document.querySelectorAll('.project-link').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
         alert('Project demo/GitHub link will be added here!');
-        // In production, these would link to actual project pages
     });
 });
 
 
-// ===== FORM VALIDATION =====
 
 // Real-time email validation
 const emailInput = document.getElementById('email');
@@ -325,9 +274,6 @@ emailInput.addEventListener('blur', () => {
 });
 
 
-// ===== PERFORMANCE OPTIMIZATION =====
-
-// Lazy load images
 document.addEventListener('DOMContentLoaded', () => {
     const images = document.querySelectorAll('img');
     
@@ -335,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const img = entry.target;
-                img.src = img.src; // Trigger load
+                img.src = img.src; 
                 observer.unobserve(img);
             }
         });
@@ -345,9 +291,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// ===== WELCOME MESSAGE =====
+
 
 window.addEventListener('load', () => {
     console.log('Portfolio loaded successfully! ✨');
     console.log('Theme:', localStorage.getItem('theme') || 'light-mode');
+
 });
